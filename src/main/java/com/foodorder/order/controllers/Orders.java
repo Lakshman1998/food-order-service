@@ -16,6 +16,7 @@ public class Orders extends Response {
 
     @GetMapping(value = "/test")
     public ResponseEntity checkOrders() {
+        System.out.println("hello");
         return orderService.testOrders()
                 .fold(this::error, this::success);
     }
